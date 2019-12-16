@@ -1,14 +1,15 @@
 $(document).ready(function(){
     $('#searchbox').selectize({
-        valueField: 'url',
-        labelField: 'name',
-        searchField: ['name'],
         maxOptions: 10,
+        valueField: 'url',
+        searchField: ['name'],
+        labelField: 'name',
         options: [],
         create: false,
         render: {
             option: function(item, escape) {
                 return '<div><img src="'+ item.icon +'">' +escape(item.name)+'</div>';
+                // console.log(item.name);
             }
         },
         optgroups: [
